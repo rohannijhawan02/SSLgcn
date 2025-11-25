@@ -1,0 +1,484 @@
+================================================================================
+SSL-GCN Dataset Summary Report
+================================================================================
+
+
+================================================================================
+Dataset: NR-AhR
+================================================================================
+
+Basic Statistics:
+  Total molecules: 7831
+  Valid molecules: 6549
+  Missing labels: 1282
+  Unique SMILES: 6549
+  Positive samples: 768
+  Negative samples: 5781
+  Positive rate: 0.1173
+
+Scaffold Diversity:
+  Total molecules: 6549
+  Valid scaffolds: 6549
+  Invalid molecules: 0
+  Unique scaffolds: 1926
+  Diversity ratio: 0.2941
+  Avg molecules/scaffold: 3.40
+  Max molecules in scaffold: 1623
+  Single-molecule scaffolds: 1484
+
+Split Distribution (with 0.8:0.1:0.1 ratio):
+
+  Train:
+    Size: 5240
+    Positive: 582 (0.1111)
+    Negative: 4658
+
+  Val:
+    Size: 655
+    Positive: 87 (0.1328)
+    Negative: 568
+
+  Test:
+    Size: 654
+    Positive: 99 (0.1514)
+    Negative: 555
+
+================================================================================
+Dataset: NR-AR
+================================================================================
+
+Basic Statistics:
+  Total molecules: 7831
+  Valid molecules: 7265
+  Missing labels: 566
+  Unique SMILES: 7265
+  Positive samples: 309
+  Negative samples: 6956
+  Positive rate: 0.0425
+
+Scaffold Diversity:
+  Total molecules: 7265
+  Valid scaffolds: 7265
+  Invalid molecules: 0
+  Unique scaffolds: 2159
+  Diversity ratio: 0.2972
+  Avg molecules/scaffold: 3.36
+  Max molecules in scaffold: 1703
+  Single-molecule scaffolds: 1664
+
+Split Distribution (with 0.8:0.1:0.1 ratio):
+
+  Train:
+    Size: 5812
+    Positive: 245 (0.0422)
+    Negative: 5567
+
+  Val:
+    Size: 727
+    Positive: 33 (0.0454)
+    Negative: 694
+
+  Test:
+    Size: 726
+    Positive: 31 (0.0427)
+    Negative: 695
+
+================================================================================
+Dataset: NR-AR-LBD
+================================================================================
+
+Basic Statistics:
+  Total molecules: 7831
+  Valid molecules: 6758
+  Missing labels: 1073
+  Unique SMILES: 6758
+  Positive samples: 237
+  Negative samples: 6521
+  Positive rate: 0.0351
+
+Scaffold Diversity:
+  Total molecules: 6758
+  Valid scaffolds: 6758
+  Invalid molecules: 0
+  Unique scaffolds: 1946
+  Diversity ratio: 0.2880
+  Avg molecules/scaffold: 3.47
+  Max molecules in scaffold: 1650
+  Single-molecule scaffolds: 1497
+
+Split Distribution (with 0.8:0.1:0.1 ratio):
+
+  Train:
+    Size: 5407
+    Positive: 187 (0.0346)
+    Negative: 5220
+
+  Val:
+    Size: 676
+    Positive: 27 (0.0399)
+    Negative: 649
+
+  Test:
+    Size: 675
+    Positive: 23 (0.0341)
+    Negative: 652
+
+================================================================================
+Dataset: NR-Aromatase
+================================================================================
+
+Basic Statistics:
+  Total molecules: 7831
+  Valid molecules: 5821
+  Missing labels: 2010
+  Unique SMILES: 5821
+  Positive samples: 300
+  Negative samples: 5521
+  Positive rate: 0.0515
+
+Scaffold Diversity:
+  Total molecules: 5821
+  Valid scaffolds: 5821
+  Invalid molecules: 0
+  Unique scaffolds: 1671
+  Diversity ratio: 0.2871
+  Avg molecules/scaffold: 3.48
+  Max molecules in scaffold: 1527
+  Single-molecule scaffolds: 1289
+
+Split Distribution (with 0.8:0.1:0.1 ratio):
+
+  Train:
+    Size: 4657
+    Positive: 185 (0.0397)
+    Negative: 4472
+
+  Val:
+    Size: 583
+    Positive: 58 (0.0995)
+    Negative: 525
+
+  Test:
+    Size: 581
+    Positive: 57 (0.0981)
+    Negative: 524
+
+================================================================================
+Dataset: NR-ER
+================================================================================
+
+Basic Statistics:
+  Total molecules: 7831
+  Valid molecules: 6193
+  Missing labels: 1638
+  Unique SMILES: 6193
+  Positive samples: 793
+  Negative samples: 5400
+  Positive rate: 0.1280
+
+Scaffold Diversity:
+  Total molecules: 6193
+  Valid scaffolds: 6193
+  Invalid molecules: 0
+  Unique scaffolds: 1769
+  Diversity ratio: 0.2856
+  Avg molecules/scaffold: 3.50
+  Max molecules in scaffold: 1562
+  Single-molecule scaffolds: 1359
+
+Split Distribution (with 0.8:0.1:0.1 ratio):
+
+  Train:
+    Size: 4955
+    Positive: 628 (0.1267)
+    Negative: 4327
+
+  Val:
+    Size: 620
+    Positive: 74 (0.1194)
+    Negative: 546
+
+  Test:
+    Size: 618
+    Positive: 91 (0.1472)
+    Negative: 527
+
+================================================================================
+Dataset: NR-ER-LBD
+================================================================================
+
+Basic Statistics:
+  Total molecules: 7831
+  Valid molecules: 6955
+  Missing labels: 876
+  Unique SMILES: 6955
+  Positive samples: 350
+  Negative samples: 6605
+  Positive rate: 0.0503
+
+Scaffold Diversity:
+  Total molecules: 6955
+  Valid scaffolds: 6955
+  Invalid molecules: 0
+  Unique scaffolds: 2025
+  Diversity ratio: 0.2912
+  Avg molecules/scaffold: 3.43
+  Max molecules in scaffold: 1676
+  Single-molecule scaffolds: 1553
+
+Split Distribution (with 0.8:0.1:0.1 ratio):
+
+  Train:
+    Size: 5564
+    Positive: 289 (0.0519)
+    Negative: 5275
+
+  Val:
+    Size: 696
+    Positive: 31 (0.0445)
+    Negative: 665
+
+  Test:
+    Size: 695
+    Positive: 30 (0.0432)
+    Negative: 665
+
+================================================================================
+Dataset: NR-PPAR-gamma
+================================================================================
+
+Basic Statistics:
+  Total molecules: 7831
+  Valid molecules: 6450
+  Missing labels: 1381
+  Unique SMILES: 6450
+  Positive samples: 186
+  Negative samples: 6264
+  Positive rate: 0.0288
+
+Scaffold Diversity:
+  Total molecules: 6450
+  Valid scaffolds: 6450
+  Invalid molecules: 0
+  Unique scaffolds: 1812
+  Diversity ratio: 0.2809
+  Avg molecules/scaffold: 3.56
+  Max molecules in scaffold: 1646
+  Single-molecule scaffolds: 1396
+
+Split Distribution (with 0.8:0.1:0.1 ratio):
+
+  Train:
+    Size: 5160
+    Positive: 120 (0.0233)
+    Negative: 5040
+
+  Val:
+    Size: 645
+    Positive: 25 (0.0388)
+    Negative: 620
+
+  Test:
+    Size: 645
+    Positive: 41 (0.0636)
+    Negative: 604
+
+================================================================================
+Dataset: SR-ARE
+================================================================================
+
+Basic Statistics:
+  Total molecules: 7831
+  Valid molecules: 5832
+  Missing labels: 1999
+  Unique SMILES: 5832
+  Positive samples: 942
+  Negative samples: 4890
+  Positive rate: 0.1615
+
+Scaffold Diversity:
+  Total molecules: 5832
+  Valid scaffolds: 5832
+  Invalid molecules: 0
+  Unique scaffolds: 1577
+  Diversity ratio: 0.2704
+  Avg molecules/scaffold: 3.70
+  Max molecules in scaffold: 1518
+  Single-molecule scaffolds: 1203
+
+Split Distribution (with 0.8:0.1:0.1 ratio):
+
+  Train:
+    Size: 4666
+    Positive: 675 (0.1447)
+    Negative: 3991
+
+  Val:
+    Size: 584
+    Positive: 130 (0.2226)
+    Negative: 454
+
+  Test:
+    Size: 582
+    Positive: 137 (0.2354)
+    Negative: 445
+
+================================================================================
+Dataset: SR-ATAD5
+================================================================================
+
+Basic Statistics:
+  Total molecules: 7831
+  Valid molecules: 7072
+  Missing labels: 759
+  Unique SMILES: 7072
+  Positive samples: 264
+  Negative samples: 6808
+  Positive rate: 0.0373
+
+Scaffold Diversity:
+  Total molecules: 7072
+  Valid scaffolds: 7072
+  Invalid molecules: 0
+  Unique scaffolds: 2049
+  Diversity ratio: 0.2897
+  Avg molecules/scaffold: 3.45
+  Max molecules in scaffold: 1700
+  Single-molecule scaffolds: 1570
+
+Split Distribution (with 0.8:0.1:0.1 ratio):
+
+  Train:
+    Size: 5658
+    Positive: 196 (0.0346)
+    Negative: 5462
+
+  Val:
+    Size: 708
+    Positive: 32 (0.0452)
+    Negative: 676
+
+  Test:
+    Size: 706
+    Positive: 36 (0.0510)
+    Negative: 670
+
+================================================================================
+Dataset: SR-HSE
+================================================================================
+
+Basic Statistics:
+  Total molecules: 7831
+  Valid molecules: 6467
+  Missing labels: 1364
+  Unique SMILES: 6467
+  Positive samples: 372
+  Negative samples: 6095
+  Positive rate: 0.0575
+
+Scaffold Diversity:
+  Total molecules: 6467
+  Valid scaffolds: 6467
+  Invalid molecules: 0
+  Unique scaffolds: 1816
+  Diversity ratio: 0.2808
+  Avg molecules/scaffold: 3.56
+  Max molecules in scaffold: 1613
+  Single-molecule scaffolds: 1396
+
+Split Distribution (with 0.8:0.1:0.1 ratio):
+
+  Train:
+    Size: 5174
+    Positive: 264 (0.0510)
+    Negative: 4910
+
+  Val:
+    Size: 647
+    Positive: 60 (0.0927)
+    Negative: 587
+
+  Test:
+    Size: 646
+    Positive: 48 (0.0743)
+    Negative: 598
+
+================================================================================
+Dataset: SR-MMP
+================================================================================
+
+Basic Statistics:
+  Total molecules: 7831
+  Valid molecules: 5810
+  Missing labels: 2021
+  Unique SMILES: 5810
+  Positive samples: 918
+  Negative samples: 4892
+  Positive rate: 0.1580
+
+Scaffold Diversity:
+  Total molecules: 5810
+  Valid scaffolds: 5810
+  Invalid molecules: 0
+  Unique scaffolds: 1668
+  Diversity ratio: 0.2871
+  Avg molecules/scaffold: 3.48
+  Max molecules in scaffold: 1472
+  Single-molecule scaffolds: 1292
+
+Split Distribution (with 0.8:0.1:0.1 ratio):
+
+  Train:
+    Size: 4648
+    Positive: 677 (0.1457)
+    Negative: 3971
+
+  Val:
+    Size: 581
+    Positive: 121 (0.2083)
+    Negative: 460
+
+  Test:
+    Size: 581
+    Positive: 120 (0.2065)
+    Negative: 461
+
+================================================================================
+Dataset: SR-p53
+================================================================================
+
+Basic Statistics:
+  Total molecules: 7831
+  Valid molecules: 6774
+  Missing labels: 1057
+  Unique SMILES: 6774
+  Positive samples: 423
+  Negative samples: 6351
+  Positive rate: 0.0624
+
+Scaffold Diversity:
+  Total molecules: 6774
+  Valid scaffolds: 6774
+  Invalid molecules: 0
+  Unique scaffolds: 1965
+  Diversity ratio: 0.2901
+  Avg molecules/scaffold: 3.45
+  Max molecules in scaffold: 1657
+  Single-molecule scaffolds: 1521
+
+Split Distribution (with 0.8:0.1:0.1 ratio):
+
+  Train:
+    Size: 5420
+    Positive: 275 (0.0507)
+    Negative: 5145
+
+  Val:
+    Size: 678
+    Positive: 73 (0.1077)
+    Negative: 605
+
+  Test:
+    Size: 676
+    Positive: 75 (0.1109)
+    Negative: 601
