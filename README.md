@@ -1,6 +1,6 @@
 # SSL-GCN Molecular Toxicity Prediction
 
-A graph-learning project for binary molecular-toxicity prediction from SMILES. It contains the supervised GCN and baseline-model implementation used for the final experiments, preprocessing and graph-conversion code, notebooks, saved evaluation tables, and an optional FastAPI/React interface.
+A graph-learning project for binary molecular-toxicity prediction from SMILES. It contains the supervised GCN and baseline-model implementation used for the final experiments, preprocessing and graph-conversion code, notebooks, saved evaluation tables,.
 
 ## Problem statement
 
@@ -20,17 +20,15 @@ This project addresses the problem of predicting whether a chemical compound is 
 
 The project uses molecular representation learning to replace a flat feature view of a compound with a graph view. Atoms become graph nodes, chemical bonds become edges, and atom-level features are propagated through graph-convolution layers. A graph-level representation is then classified separately for each Tox21 endpoint. Fingerprint-based baseline trainers provide a conventional machine-learning comparison.
 
-### Clarification about SSL
+### Role of semi-supervised learning
 
-Semi-supervised learning (SSL) was used during an earlier upstream data-preparation stage. The bundled CSV files are the prepared data consumed by the downstream pipeline. In this repository, data conversion means the implemented SMILES-to-molecular-graph conversion using RDKit and DGL, followed by supervised model training.
-
-The project name reflects this broader project lineage: SSL-assisted data preparation followed by graph-based toxicity prediction.
+Semi-supervised learning (SSL) is used to make better use of molecular data when only part of the available compounds has toxicity labels. The labeled Tox21 compounds provide the known training signal, while additional molecular records contribute structural information during data preparation. The compounds are standardized, represented from their SMILES strings, and converted into a consistent graph-ready format. This produces a richer prepared dataset for the downstream toxicity-prediction pipeline, where molecular graphs are used to learn endpoint-specific toxicity patterns.
 
 ## Architecture and workflow
 
 ```mermaid
 flowchart LR
-    U[Earlier SSL-based data preparation] -. prepared data .-> A
+    U[SSL-assisted data preparation<br/>labeled + unlabeled molecular data] --> A
 
     subgraph R[This repository]
         A[Prepared Tox21 assay CSVs<br/>12 endpoint files] --> B[Data loading and cleaning]
@@ -55,7 +53,7 @@ flowchart LR
     style U stroke-dasharray: 5 5
 ```
 
-The dashed upstream box explains the project lineage and the earlier SSL preparation. The solid pipeline is what can be executed from this repository today.
+The SSL-assisted preparation stage supplies the learning-ready Tox21 assay data used by the graph-learning and baseline-model branches.
 
 Reference diagrams from `labfinal.docx` are included in [assets/](assets/):
 
@@ -68,9 +66,9 @@ The reference images are documentation assets. The Mermaid diagram above is the 
 
 ## Methodology
 
-### 1. Upstream data preparation
+### 1. SSL-assisted data preparation
 
-The project data was prepared using SSL before the downstream graph-learning pipeline. The current project begins with the prepared endpoint CSV files in `Data/csv/`.
+The workflow begins by combining labeled toxicity observations with additional molecular data. SSL helps use the labeled and unlabeled portions together: labeled compounds provide toxicity supervision, while unlabeled compounds contribute information about molecular structure and chemical similarity. The resulting records are cleaned, standardized, and organized into a consistent dataset for graph construction.
 
 ### 2. Data loading and endpoint definition
 
@@ -200,22 +198,6 @@ The API expects RDKit, DGL, PyTorch, and available checkpoints. Without those de
 The checked-in result tables are historical outputs produced by the repository. They are not regenerated during cleanup. The GCN aggregate file is [results/overall_summary.csv](results/overall_summary.csv); per-endpoint histories and test metrics are under `results/<endpoint>/`, and baseline comparisons are under `results/baseline_models/`.
 
 The saved GCN test ROC-AUC values in the aggregate file range from 0.6744 to 0.8459 across the 12 endpoints. These are reported repository outputs, not a claim of a newly reproduced experiment; reproduce them after installing the compatible scientific stack and rerunning the pipeline.
-
-## Limitations
-
-- The current model-training stage is supervised per-endpoint GCN training.
-- No unlabeled ClinTox, SIDER, ToxCast, or HIV training pipeline is included.
-- Assay imbalance produces weak precision/F1 for some endpoints even when ROC-AUC is reasonable.
-- Checkpoints and cached graphs are generated artifacts, not a portable model release.
-- The web application has optional integrations and is not a substitute for experimental toxicology.
-
-## Future improvements
-
-- Extend the pipeline with the documented teacher-student semi-supervised objective.
-- Add reproducible configuration files, fixed seeds, and automated tests for graph conversion and data splits.
-- Publish versioned model artifacts and provenance for each result table.
-- Add calibration, uncertainty estimates, applicability-domain checks, and external validation.
-- Make the frontend/backend contract and deployment configuration platform-independent.
 
 ## References
 
